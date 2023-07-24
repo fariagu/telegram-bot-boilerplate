@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS habit_user (
+    id          SERIAL      PRIMARY KEY,
+    username    VARCHAR(50) UNIQUE NOT NULL,
+    firstname   VARCHAR(50) NOT NULL,
+    chat_id     BIGINT      UNIQUE NOT NULL,
+    created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
